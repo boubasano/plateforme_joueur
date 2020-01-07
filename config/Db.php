@@ -4,9 +4,9 @@ class Db {
 
     private const DB_HOST = 'localhost';
     private const DB_PORT = '3306';
-    private const DB_NAME = 'video_games';
-    private const DB_USER = 'root';
-    private const DB_PWD  = 'root';
+    private const DB_NAME = 'plateforme_joueur';
+    private const DB_USER = 'aboubacar';
+    private const DB_PWD  = 'Babbou84.';
 
     public function __construct() { 
 

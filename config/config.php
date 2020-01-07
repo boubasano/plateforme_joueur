@@ -4,8 +4,8 @@
  * Config files
  */
 
-const WEBSITE_TITLE = "My website title";
-const BASE_URL = "/mvc";
+const WEBSITE_TITLE = "Plateforme joueurs";
+const BASE_URL = "/plateforme_joueur";
 
 const CLASSES_SOURCES = [
     'src/controller',
