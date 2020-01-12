@@ -8,31 +8,51 @@
 
         <!-- Bootstrap core CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link href="<?= css_url('style.css'); ?>" rel="stylesheet">
+        <link href="<?= css_url('style.css'); ?>" rel="stylesheet" type="text/css">
     </head>
-    <body>
-        <header>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <div class="container">    
-                    <a class="navbar-brand" href="<?= BASE_URL; ?>">Accueil</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarText">
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" href="<?= url('contact') ?>">Contact</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="<?= url('a-propos') ?>">A Propos</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>
+    
+    <body>     
 
-        <main role="main">
+    <header>   <!-- debut header-->
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+            <!-- logo-->
+            <a class="navbar-brand"><img src="public/assets/img/logo_foot.jpg" height="50px" ></a> 
+
+        <div class="container-fluid">  <!--debut container-fluid-->
+
+                    <!--liste de menus-->
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link " href="<?= BASE_URL; ?>">Home</a></li>
+                <li class="nav-item"><a class="nav-link " href="<?= url('a-propos') ?>">A propos</a></li>
+                <li class="nav-item"><a class="nav-link " href="<?= url('contact') ?>">Contact</a></li>
+                <li class="nav-item"><a class="nav-link " href="<?= url('offre') ?>">Offres</a></li>
+                <li class="nav-item"><a class="nav-link " href="<?= url('inscription') ?>">Inscription</a></li>
+                <li class="nav-item"><a class="nav-link " href="<?= url('fiche-joueur') ?>">Fiches Joueurs</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">Login</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="<?= url('joueur') ?>">Joueur</a>
+                        <a class="dropdown-item" href="<?= url('agent') ?>">Agent</a>
+                        <a class="dropdown-item" href="<?= url('club') ?>">Club</a>
+                    </div>
+                </li>
+            </ul>
+        <!--fin liste de menus-->
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="" aria-label="Search">
+                <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Rechercher</button>
+            </form>
+        </div><!--fin container-fluid-->
+        </nav> <!--fin nav-->
+        <div id="bandeau_header">
+            <img src="public/assets/img/image_header.png" height="250px" width= 100% >
+        </div>
+
+    </header>  <!-- fin header-->
+
+    <main role="main">
         <div class="album py-5 bg-light">
             <div class="container">
                 <?php
@@ -41,14 +61,16 @@
                 ?>
             </div>
         </div>
-        </main>
+    </main>
 
-        <footer>
+        <footer class="row">
             <div class="container">
-            <p class="float-right">
+                <!--copyright-->
+                <p>2019 &copy; </p>
+                <div>
                 
-            </p>
-            <p>2019 &copy; </p>
+                </div>
+
             </div>
         </footer>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>

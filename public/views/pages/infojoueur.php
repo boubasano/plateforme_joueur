@@ -2,7 +2,7 @@
 
 <div class="container">
 
-<h1>Contact</h1>
+<h1>Infos joueur</h1>
 <?php if (!$formValid): ?>
 
     <?= $errors; ?>

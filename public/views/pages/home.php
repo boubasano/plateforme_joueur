@@ -1,8 +1,6 @@
 <?php $title = 'Accueil'; ?>
 <?php ob_start(); ?>
 
-<h1>Bienvenue !</h1>
-
 <p>
     <?= $data ?>
 </p>

@@ -13,6 +13,14 @@ $router->get('contact', 'PagesController@contact');
 // reception des données 
 $router->post('contact', 'PagesController@contact');
 
+//PAGE D'INSCRIPTION///////////////////////////
+$router->get('inscription', 'InscriptionController@inscription');
+
+//INSCRIPTION  JOUEUR
+$router->get('infojoueur', 'InfosjoueurController@infosjoueur');
+$router->post('infojoueur', 'InfosjoueurController@infosjoueur');
+
+
 // pages avec parametre 
 $router->get('plateforme/update/{id}', 'PlateformesController@update');
 
