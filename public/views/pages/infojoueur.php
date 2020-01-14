@@ -3,17 +3,13 @@
 <div class="container">
 
 <h1>Infos joueur</h1>
-<?php if (!$formValid): ?>
+
 
     <?= $errors; ?>
     <!-- formulaire -->
     <?= $formulaireHtml; ?>
 
-<?php else: ?>
 
-    <p>Votre demande à bien été prise en compte.</p>
-
-<?php endif; ?>
 
 </div>
 
