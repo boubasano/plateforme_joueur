@@ -45,10 +45,11 @@
                     "email_joueur"     => $_POST['email'],
                     "motdepasse_joueur"     => password_hash($_POST['motdepasse'], PASSWORD_BCRYPT)                  
                 ]);
-                
+                 var_dump($id);
                 if ( $id) {
                     // user connecté 
-                    redirectTo('inscription');
+                    //redirectTo('inscription');
+                   
                 }
             } else {
                 // affichage des erreurs 
