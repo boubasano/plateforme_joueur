@@ -105,8 +105,8 @@ class Joueur extends Db {
     
         // je verifie si l'e-mail est présent en BDD 
         $query = $bdd->prepare('SELECT * 
-                                FROM user 
-                                WHERE usr_email = :email');
+                                FROM joueur 
+                                WHERE email_joueur = :email');
     
         // j'execute ma requete 
         $query->execute([
@@ -119,14 +119,14 @@ class Joueur extends Db {
         if ($user) {
 
             // je vérifie si le MDP tapé correspond à la clé de hashage 
-            $verify = password_verify($password, $user['usr_password']);
+            $verify = password_verify($password, $user['password_joueur']);
 
             if ($verify) {
                 // connecté
-                unset($user['usr_password']);
+                unset($user['password_joueur']);
 
                 // je stock les infos user dans une variable de session 
-                $_SESSION['user'] = $user;
+                $_SESSION['joueur'] = $user;
 
                 // je retourne les infos utilisateur 
                 return $user;

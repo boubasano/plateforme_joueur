@@ -48,7 +48,7 @@
                  var_dump($id);
                 if ( $id) {
                     // user connecté 
-                    //redirectTo('inscription');
+                    redirectTo('inscription');
                    
                 }
             } else {
@@ -60,6 +60,7 @@
             view('pages.infojoueur', compact('formulaireHtml', 'formValid', 'errors'));
        
         }
+        
 
         public function show($id) {
             
